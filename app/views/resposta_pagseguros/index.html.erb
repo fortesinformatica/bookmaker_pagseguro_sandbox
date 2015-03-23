@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Resposta Pagseguros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @resposta_pagseguros.each do |resposta_pagseguro| %>
+      <tr>
+        <td><%= link_to 'Show', resposta_pagseguro %></td>
+        <td><%= link_to 'Edit', edit_resposta_pagseguro_path(resposta_pagseguro) %></td>
+        <td><%= link_to 'Destroy', resposta_pagseguro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Resposta pagseguro', new_resposta_pagseguro_path %>

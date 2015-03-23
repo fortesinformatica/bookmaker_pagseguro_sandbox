@@ -1,0 +1,17 @@
+<%= form_for(@resposta_pagseguro) do |f| %>
+  <% if @resposta_pagseguro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@resposta_pagseguro.errors.count, "error") %> prohibited this resposta_pagseguro from being saved:</h2>
+
+      <ul>
+      <% @resposta_pagseguro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
